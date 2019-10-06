@@ -1,0 +1,52 @@
+$dark-back-color: #131313;
+$button-color: #E3B873;
+@font-face {
+    font-family: "Yeseva One";
+    src: url(./assets/fonts/Yeseva_One/YesevaOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: FuturaDemiC;
+    src: url(./assets/fonts/futurademic.otf);
+}
+
+@font-face {
+    font-family: FuturaBookC;
+    src: url(./assets/fonts/futurabookc.otf);
+}
+
+@font-face {
+    font-family: "Proksima Nova";
+    src: url(./assets/fonts/proxima_ssv/ProximaNova-Regular.otf);
+}
+
+@mixin highlight-font {
+    font-family: "Yeseva One", 'Times New Roman', Times, serif;
+    color: #E3B873;
+    text-transform: uppercase;
+}
+
+// main styles
+* {
+    margin: 10px 10px;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1440px;
+}
+
+.container {
+    width: 100%;
+    background: $dark-back-color;
+}
+
+.home-section {
+    background-color: $dark-back-color;
+    min-height: 1860px;
+}
+
+.repair-styles {
+    width: 100%;
+    background-image: url(./assets/images/realixe-fant-back.png);
+}
