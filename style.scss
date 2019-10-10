@@ -22,10 +22,12 @@ $text-color: white;
     src: url(./assets/fonts/proxima_ssv/ProximaNova-Regular.otf);
 }
 
-@mixin highlight-font {
+@mixin highlight-font ($color, $fontsize) {
     font-family: "Yeseva One", 'Times New Roman', Times, serif;
-    color: #E3B873;
+    color: $color;
+    font-size: $fontsize;
     text-transform: uppercase;
+    line-height: 1.5em;
 }
 
 // main styles
@@ -83,7 +85,7 @@ $text-color: white;
 }
 
 .button {
-    width: 13%;
+    width: 15%;
     height: 100%;
     background-color: $button-color;
     text-transform: uppercase;
@@ -111,6 +113,7 @@ $text-color: white;
 }
 
 .home__first-line {
+    position: relative;
     display: grid;
     grid-template-columns: 5.7% 94.3%;
     width: 100%;
@@ -119,25 +122,99 @@ $text-color: white;
 .first-line__aside {
     display: flex;
     justify-content: center;
-    align-items: center;
+    height: 50%;
+    margin-top: 8vw;
 }
 
 .first-line__instagram {
     font-family: FuturaBookC, Arial, Helvetica, sans-serif;
     text-transform: uppercase;
-    color: $text-color;
+    color: $special-text-color;
+    text-align: center;
     writing-mode: tb-rl;
 }
 
 .first-line__main-photo-name {
-    background: url(./assets/images/main-section-back.png) no-repeat;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./assets/images/main-section-back.png) no-repeat;
     background-size: 100%;
+    background-color: #2b252585;
+    display: flex;
+    height: 48vw;
 }
 
 .main-photo-name__inner {
+    width: 500px;
+    height: 50%;
+    margin-top: 15%;
+    margin-bottom: 15%;
     margin-left: 4.5%;
-    margin-top: 28%;
-    margin-bottom: 28%;
+    .button {
+        width: 43%;
+        height: 4vw;
+    }
+}
+
+.button-submit {
+    background: 0;
+    border: 1px solid $text-color;
+    &:hover {
+        border: 1px solid $button-color;
+    }
+}
+
+.main-photo-name__inner>div {
+    margin-top: 5%;
+}
+
+.highlight {
+    @include highlight-font($special-text-color, 22px);
+    span {
+        color: $text-color;
+    }
+}
+
+.main-photo-name__description {
+    width: 70%;
+    font-family: FuturaBookC, Arial, Helvetica, sans-serif;
+    color: $text-color;
+    font-size: 15px;
+    line-height: 1.5em;
+}
+
+.first-line__scroll-down {
+    position: absolute;
+    bottom: -20px;
+    display: flex;
+    max-width: 200px;
+    background-color: #131313;
+    padding: 1vw 2vw;
+    justify-content: center;
+    align-items: center;
+    @include highlight-font($text-color, 14px);
+    div {
+        word-wrap: normal;
+        margin-right: 0.5vw;
+    }
+}
+
+.home__second-line {
+    margin-top: 5vw;
+    display: grid;
+    grid-template-columns: 42% 58%;
+}
+
+.second-line__completed-projects-left {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    margin-left: 14%;
+    >div {
+        margin-bottom: 10%;
+        word-wrap: normal;
+    }
+    &:nth-child(1) {
+        grid-column-span:
+    }
 }
 
 .repair-styles {
