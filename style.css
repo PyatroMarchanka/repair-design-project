@@ -2,20 +2,27 @@
   font-family: "Yeseva One";
   src: url(./assets/fonts/Yeseva_One/YesevaOne-Regular.ttf);
 }
+
 @font-face {
   font-family: FuturaDemiC;
   src: url(./assets/fonts/futurademic.otf);
 }
+
 @font-face {
   font-family: FuturaBookC;
   src: url(./assets/fonts/futurabookc.otf);
 }
+
 @font-face {
   font-family: "Proksima Nova";
   src: url(./assets/fonts/proxima_ssv/ProximaNova-Regular.otf);
 }
+
 * {
-  margin: 10px 10px;
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .wrapper {
@@ -23,9 +30,130 @@
   max-width: 1440px;
 }
 
-.container {
+.header {
+  background-color: #131313;
   width: 100%;
-  background: #131313;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 83px;
 }
 
+.header__inner {
+  width: 87%;
+  height: 50%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+  font-family: FuturaBookC, Arial, Helvetica, sans-serif;
+}
+
+.header-inner__main-logo {
+  color: #E3B873;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 46%;
+}
+
+.navbar div a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar div a:hover {
+  color: #E3B873;
+}
+
+.phone {
+  color: #E3B873;
+  text-decoration: underline;
+}
+
+.button {
+  width: 13%;
+  height: 100%;
+  background-color: #E3B873;
+  text-transform: uppercase;
+  font-family: FuturaBookC, Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: white;
+  border: 0;
+  border-radius: 3px;
+}
+
+.button:hover {
+  background-color: white;
+  color: #E3B873;
+  border: 3px solid #E3B873;
+}
+
+.container {
+  width: 100%;
+  background: #E3B873;
+}
+
+.home-section {
+  background-color: #131313;
+  min-height: 1860px;
+}
+
+.home__first-line {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 5.7% 94.3%;
+      grid-template-columns: 5.7% 94.3%;
+  width: 100%;
+}
+
+.first-line__aside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.first-line__instagram {
+  font-family: FuturaBookC, Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  color: white;
+  -webkit-writing-mode: tb-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: tb-rl;
+}
+
+.first-line__main-photo-name {
+  background: url(./assets/images/main-section-back.png) no-repeat;
+  background-size: 100%;
+}
+
+.main-photo-name__inner {
+  margin-left: 4.5%;
+  margin-top: 28%;
+  margin-bottom: 28%;
+}
+
+.repair-styles {
+  width: 100%;
+  background-image: url(./assets/images/realixe-fant-back.png);
+}
 /*# sourceMappingURL=style.css.map */

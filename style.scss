@@ -1,5 +1,7 @@
 $dark-back-color: #131313;
 $button-color: #E3B873;
+$special-text-color: #E3B873;
+$text-color: white;
 @font-face {
     font-family: "Yeseva One";
     src: url(./assets/fonts/Yeseva_One/YesevaOne-Regular.ttf);
@@ -28,7 +30,9 @@ $button-color: #E3B873;
 
 // main styles
 * {
-    margin: 10px 10px;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
 .wrapper {
@@ -36,14 +40,104 @@ $button-color: #E3B873;
     max-width: 1440px;
 }
 
+.header {
+    background-color: $dark-back-color;
+    width: 100%;
+    display: flex;
+    height: 83px;
+}
+
+.header__inner {
+    width: 87%;
+    height: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: FuturaBookC, Arial, Helvetica, sans-serif;
+}
+
+.header-inner__main-logo {
+    color: $special-text-color;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 46%;
+}
+
+.navbar div a {
+    text-decoration: none;
+    color: $text-color;
+}
+
+.navbar div a:hover {
+    color: $special-text-color;
+}
+
+.phone {
+    color: $special-text-color;
+    text-decoration: underline;
+}
+
+.button {
+    width: 13%;
+    height: 100%;
+    background-color: $button-color;
+    text-transform: uppercase;
+    font-family: FuturaBookC, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: $text-color;
+    border: 0;
+    border-radius: 3px;
+}
+
+.button:hover {
+    background-color: $text-color;
+    color: $button-color;
+    border: 3px solid $button-color;
+}
+
 .container {
     width: 100%;
-    background: $dark-back-color;
+    background: $button-color;
 }
 
 .home-section {
     background-color: $dark-back-color;
     min-height: 1860px;
+}
+
+.home__first-line {
+    display: grid;
+    grid-template-columns: 5.7% 94.3%;
+    width: 100%;
+}
+
+.first-line__aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-line__instagram {
+    font-family: FuturaBookC, Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    color: $text-color;
+    writing-mode: tb-rl;
+}
+
+.first-line__main-photo-name {
+    background: url(./assets/images/main-section-back.png) no-repeat;
+    background-size: 100%;
+}
+
+.main-photo-name__inner {
+    margin-left: 4.5%;
+    margin-top: 28%;
+    margin-bottom: 28%;
 }
 
 .repair-styles {
