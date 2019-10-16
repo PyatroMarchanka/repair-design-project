@@ -1,0 +1,419 @@
+@media (max-width: 991px) {
+  .form-request-measures {
+    width: 60%;
+    height: 400px;
+    float: left;
+    margin: 70px 20% 50px 20%;
+  }
+  .first-line__main-photo-name {
+    background-size: 100%;
+    min-width: 681px;
+  }
+}
+
+@media (max-width: 991px) {
+  .proposes-in-circle {
+    float: none;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    display: none;
+  }
+  .proposes-in-circle {
+    display: none;
+  }
+  .form-request-measures {
+    margin: 70px 5% 50px 5%;
+    width: 90%;
+    float: unset;
+  }
+  .video {
+    width: 100%;
+    top: 50px;
+  }
+  .completed-project-mobile {
+    display: block;
+  }
+  .home__second-line {
+    display: none;
+  }
+  .container-types-of-repair {
+    background-color: black;
+    color: white;
+    margin-top: 5%;
+  }
+  .types-of-repair__request-camera {
+    height: 300px;
+    margin: 50px 0 20px 0;
+  }
+  .repair-types__type {
+    width: 500px;
+    margin-bottom: 150px;
+  }
+  .repair-types__type .type-description {
+    top: 80%;
+  }
+  .form-request {
+    display: block;
+    background-color: black;
+    border: 0;
+    min-width: 0px;
+    color: white;
+    width: 100%;
+    height: 300px;
+    float: none;
+  }
+  .form-request div {
+    margin: 15px auto;
+    font-family: FuturaDemiC, Arial, Helvetica, sans-serif;
+    text-align: center;
+  }
+  .form-request label {
+    font-family: FuturaBookC, Arial, Helvetica, sans-serif;
+    color: rgba(255, 255, 255, 0.568);
+    font-size: 12px;
+    margin-bottom: 5px;
+    display: block;
+    width: 90%;
+  }
+  .form-request input[placeholder] {
+    display: block;
+    background-color: black;
+    border: 0;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.562);
+    width: 100%;
+    height: 30px;
+    margin-bottom: 15px;
+  }
+  .form-request input[placeholder]::-webkit-input-placeholder {
+    color: white;
+  }
+  .form-request input[placeholder]:-ms-input-placeholder {
+    color: white;
+  }
+  .form-request input[placeholder]::-ms-input-placeholder {
+    color: white;
+  }
+  .form-request input[placeholder]::placeholder {
+    color: white;
+  }
+  .form-request #chekbox-2 {
+    margin-right: 10px;
+  }
+  .form-request .label-check {
+    color: white;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .form-request .submit-1 {
+    background-color: #E3B873;
+    font-family: FuturaDemiC, Arial, Helvetica, sans-serif;
+    width: 60%;
+    height: 40px;
+    float: none;
+    margin: 0 auto;
+    margin-top: 10%;
+    text-transform: uppercase;
+  }
+  .form-request .submit-1:hover {
+    background-color: white;
+    color: #E3B873;
+    border: 3px solid #E3B873;
+    cursor: pointer;
+  }
+  .container-repair-styles__mobile {
+    text-align: center;
+    height: 249px;
+    display: block;
+  }
+  .container-repair-styles__mobile .main-image {
+    margin: 0 auto;
+    width: 90%;
+  }
+  .container-repair-styles__mobile .main-image .image {
+    width: 100%;
+    position: relative;
+    bottom: -10vw;
+    margin-top: calc(124px - 20vw);
+  }
+  .container-repair-styles__mobile .main-image .image .left-right {
+    position: absolute;
+    border-radius: 50%;
+  }
+  .container-repair-styles__mobile .main-image .image .left-right:hover {
+    border: 2px solid white;
+  }
+  .container-repair-styles__mobile .main-image .image .left-2 {
+    top: 45%;
+    left: 5%;
+  }
+  .container-repair-styles__mobile .main-image .image .right-2 {
+    top: 45%;
+    left: 85%;
+  }
+  .container-repair-styles__mobile .main-image .image .main-image-inner {
+    width: 100%;
+  }
+  .container-repair-styles__mobile .list__highlight {
+    width: 100%;
+    font-size: 1.5em;
+  }
+  .container-repair-styles {
+    display: none;
+  }
+  .design-project {
+    background: black;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    padding-top: calc(34vw - 26px);
+  }
+  .design-project__highlight,
+  .design-project__description {
+    color: white;
+  }
+  .design-types__wrapper {
+    margin: 0 auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .design-types__type .design-description {
+    position: relative;
+    top: 46vw;
+    left: -5%;
+  }
+  .design-types__type {
+    margin: 0 auto;
+    width: 65%;
+    height: 88vw;
+    margin-bottom: calc(200px - 23vw);
+  }
+  .design-types__type-2 {
+    height: 107vw;
+  }
+  .design-types__type-3 {
+    height: 123vw;
+  }
+  .steps-to-goal {
+    display: none;
+  }
+  .our-team__persones {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    width: 100%;
+    padding: 0px 0px;
+  }
+  .our-team__person {
+    margin: 0 auto;
+    width: 65%;
+    height: 700px;
+    margin-top: 50px;
+  }
+  .our-team__person .experience {
+    position: relative;
+    bottom: -250px;
+  }
+  .our-team__person .name {
+    position: relative;
+    bottom: -260px;
+    height: 150px;
+  }
+  .our-team__person img {
+    bottom: 10vw;
+  }
+  .our-clients__clients {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    width: 100%;
+  }
+  .our-clients__clients .client {
+    width: 65%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+  .client__profile .name {
+    font-size: 20px;
+  }
+  .form-questions {
+    width: 100%;
+  }
+  .contacts__map img {
+    width: 90%;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 991px) {
+  .repair-types__type .type-description {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+  }
+  .repair-types__type {
+    margin-bottom: 150px;
+  }
+}
+
+@media (max-width: 479px) {
+  .home__first-line {
+    display: block;
+  }
+  .main-photo-name__inner {
+    margin-top: 4vh;
+  }
+  .first-line__aside {
+    display: none;
+  }
+  .first-line__main-photo-name {
+    background-size: 100%;
+  }
+  .first-line__main-photo-name h1 {
+    font-size: 24px;
+    font-weight: 400;
+  }
+  .main-photo-name__buttons {
+    display: block;
+  }
+  .main-photo-name__buttons .button {
+    margin-bottom: 2vh;
+  }
+  .navbar {
+    display: none;
+  }
+  .button-request {
+    display: none;
+  }
+  .button-submit-screen {
+    display: none;
+  }
+  .button-submit-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .first-line__scroll-down {
+    display: none;
+  }
+  .main-photo-name__inner {
+    width: 500px;
+    height: 50%;
+    margin-top: 0%;
+    margin-left: 4.5%;
+  }
+  .repair-types__type {
+    width: 95%;
+    height: 111vw;
+    min-width: 0px;
+  }
+  .repair-types__type .type-description {
+    top: 66%;
+  }
+  .type-description__button-cost {
+    height: 43px;
+  }
+  .design-types__type-3 {
+    height: 150vw;
+  }
+  .our-team__person {
+    width: 75%;
+    height: 530px;
+  }
+  .our-team__person .name {
+    bottom: -180px;
+  }
+  .our-team__person .experience {
+    bottom: -165px;
+  }
+  .design-types__type {
+    width: 95%;
+  }
+  .design-types__type .design-description {
+    top: 60vw;
+  }
+  .our-clients {
+    display: none;
+  }
+  .team__description {
+    display: none;
+  }
+  .form-questions {
+    bottom: 0;
+    background-color: black;
+    padding: 3% 10%;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 50px;
+  }
+  .form-questions .form-questions form .label-name-3 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-area: 1/1/2/2;
+  }
+  .form-questions #name-3 {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-area: 2/1/3/2;
+  }
+  .form-questions .form-questions form .label-phone-3 {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-area: 3/1/4/2;
+  }
+  .form-questions #phone-3 {
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-area: 4/1/5/2;
+  }
+  .form-questions #agree-3 {
+    margin-bottom: 0px;
+  }
+  .form-questions .form-questions__highlight {
+    font-size: 20px;
+  }
+  .form-questions form .name-and-phone {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+  }
+  .form-questions form .name-and-phone input {
+    margin-bottom: 15px;
+  }
+  .form-questions form > .submit-3 {
+    width: 100%;
+  }
+  .contacts {
+    padding-top: 0px;
+  }
+  .contacts__map {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-area: 1/1/2/2;
+  }
+  .footer {
+    display: none;
+  }
+}
+/*# sourceMappingURL=media-queries.css.map */
