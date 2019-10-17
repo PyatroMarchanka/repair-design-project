@@ -1,52 +1,1268 @@
-$dark-back-color: #131313;
-$button-color: #E3B873;
-@font-face {
-    font-family: "Yeseva One";
-    src: url(./assets/fonts/Yeseva_One/YesevaOne-Regular.ttf);
-}
-
-@font-face {
-    font-family: FuturaDemiC;
-    src: url(./assets/fonts/futurademic.otf);
-}
-
-@font-face {
-    font-family: FuturaBookC;
-    src: url(./assets/fonts/futurabookc.otf);
-}
-
-@font-face {
-    font-family: "Proksima Nova";
-    src: url(./assets/fonts/proxima_ssv/ProximaNova-Regular.otf);
-}
-
-@mixin highlight-font {
-    font-family: "Yeseva One", 'Times New Roman', Times, serif;
-    color: #E3B873;
-    text-transform: uppercase;
-}
-
-// main styles
-* {
-    margin: 10px 10px;
-}
-
-.wrapper {
-    width: 100%;
-    max-width: 1440px;
-}
-
-.container {
-    width: 100%;
-    background: $dark-back-color;
-}
-
-.home-section {
-    background-color: $dark-back-color;
-    min-height: 1860px;
-}
-
-.repair-styles {
-    width: 100%;
-    background-image: url(./assets/images/realixe-fant-back.png);
-}
+        $dark-back-color: #131313;
+        $button-color: #E3B873;
+        $special-text-color: #E3B873;
+        $text-color: white;
+        $mobile-screen: 479px;
+        $large-table-screen: 991px;
+        $medium-table-screen: 767px;
+        @font-face {
+            font-family: "Yeseva One";
+            src: url(./assets/fonts/Yeseva_One/YesevaOne-Regular.ttf);
+        }
+        
+        @font-face {
+            font-family: FuturaDemiC;
+            src: url(./assets/fonts/futurademic.otf);
+        }
+        
+        @font-face {
+            font-family: FuturaBookC;
+            src: url(./assets/fonts/futurabookc.otf);
+        }
+        
+        @font-face {
+            font-family: "Proksima Nova";
+            src: url(./assets/fonts/proxima_ssv/ProximaNova-Regular.otf);
+        }
+        
+        @mixin highlight-font ($color, $fontsize) {
+            font-family: "Yeseva One", 'Times New Roman', Times, serif;
+            color: $color;
+            font-size: $fontsize;
+            text-transform: uppercase;
+            line-height: 1.5em;
+        }
+        
+        @mixin button($width, $height) {
+            width: $width;
+            height: $height;
+            background-color: $button-color;
+            text-transform: uppercase;
+            font-family: FuturaBookC, Arial, Helvetica, sans-serif;
+            font-weight: 100;
+            color: $text-color;
+            border: 0;
+            border-radius: 3px;
+            &:hover {
+                background-color: $text-color;
+                color: $button-color;
+                border: 3px solid $button-color;
+                cursor: pointer;
+            }
+        }
+        
+        // main styles
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        .wrapper {
+            width: 100%;
+            max-width: 1440px;
+            overflow: hidden;
+        }
+        
+        .header {
+            background-color: $dark-back-color;
+            width: 100%;
+            display: flex;
+            height: 83px;
+        }
+        
+        .header__inner {
+            width: 87%;
+            height: 50%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-transform: uppercase;
+            font-family: FuturaBookC, Arial, Helvetica, sans-serif;
+        }
+        
+        .header-inner__main-logo {
+            color: $special-text-color;
+            h1 {
+                font-size: medium;
+            }
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            width: 46%;
+        }
+        
+        @media (max-width: 1000px) {
+            .button-request,
+            .n3 {
+                display: none;
+            }
+        }
+        
+        .navbar div a {
+            text-decoration: none;
+            color: $text-color;
+        }
+        
+        .navbar div a:hover {
+            color: $special-text-color;
+            cursor: pointer;
+        }
+        
+        .phone {
+            a {
+                color: $special-text-color;
+                text-decoration: underline;
+            }
+        }
+        
+        .button {
+            width: 15%;
+            height: 100%;
+            text-align: center;
+            background-color: $button-color;
+            text-transform: uppercase;
+            font-family: FuturaBookC, Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            color: $text-color;
+            border: 0;
+            border-radius: 3px;
+            &:hover {
+                background-color: $text-color;
+                color: $button-color;
+                border: 3px solid $button-color;
+                cursor: pointer;
+            }
+        }
+        
+        .container {
+            width: 100%;
+            background: $button-color;
+        }
+        
+        .home-section {
+            background-color: $dark-back-color;
+            z-index: 1;
+        }
+        
+        .home__first-line {
+            display: grid;
+            grid-template-columns: 5.7% 94.3%;
+            width: 100%;
+            z-index: 1;
+            position: relative;
+        }
+        
+        .first-line__aside {
+            display: flex;
+            justify-content: center;
+            height: 50%;
+            margin-top: 8vw;
+        }
+        
+        .first-line__instagram {
+            font-family: FuturaBookC, Arial, Helvetica, sans-serif;
+            text-transform: uppercase;
+            color: $special-text-color;
+            text-align: center;
+            writing-mode: tb-rl;
+            a {
+                color: $special-text-color;
+                &:hover {
+                    color: white;
+                }
+            }
+        }
+        
+        .first-line__main-photo-name {
+            background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./assets/images/main-section-back.png) no-repeat;
+            background-size: 100%;
+            display: flex;
+            height: 48vw;
+            min-height: 345px;
+            min-width: 681px;
+        }
+        
+        .main-photo-name__inner {
+            width: 500px;
+            height: 50%;
+            margin-top: 11%;
+            margin-left: 4.5%;
+        }
+        
+        .photo-name__button {
+            width: 40%;
+            height: 40px;
+            display: flex;
+            min-width: 90px;
+            justify-content: center;
+            align-items: center;
+            margin-left: 1vw;
+        }
+        
+        .button-submit-mobile {
+            display: none;
+        }
+        
+        .main-photo-name__buttons {
+            min-width: 200px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .button-submit {
+            background: 0;
+            border: 1px solid $text-color;
+            &:hover {
+                cursor: pointer;
+                border: 1px solid $button-color;
+            }
+        }
+        
+        .main-photo-name__inner>div {
+            margin-top: 5%;
+        }
+        
+        .highlight {
+            @include highlight-font($special-text-color, 22px);
+            span {
+                color: $text-color;
+            }
+        }
+        
+        .main-photo-name__description {
+            width: 70%;
+            font-family: FuturaBookC, Arial, Helvetica, sans-serif;
+            color: $text-color;
+            font-size: 15px;
+            line-height: 1.5em;
+        }
+        
+        @media (min-width: $mobile-screen) and (max-width: $medium-table-screen) {
+            .first-line__scroll-down {
+                display: none;
+            }
+        }
+        
+        .first-line__scroll-down a {
+            position: absolute;
+            bottom: -20px;
+            margin-bottom: 20px;
+            display: flex;
+            max-width: 200px;
+            background-color: #131313;
+            padding: 1vw 2vw;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+            @include highlight-font($text-color, 14px);
+            div {
+                word-wrap: normal;
+                margin-right: 0.5vw;
+            }
+            .scroll-svg {
+                z-index: 10;
+            }
+            &:hover {
+                cursor: pointer;
+                border: 3px solid $special-text-color;
+            }
+        }
+        
+        .home__second-line {
+            display: grid;
+            position: relative;
+            grid-template-areas: ". project-names" "completed photo-slider";
+            grid-template-columns: 40% 60%;
+            // grid-template-rows: 0.5fr 5fr;
+            grid-gap: 3vw;
+            z-index: 1;
+        }
+        
+        .completed-project-mobile {
+            padding-top: 40px;
+            display: none;
+            text-align: center;
+            >div {
+                margin-bottom: 20px;
+            }
+            .description {
+                width: 90%;
+                margin: 0 auto;
+                margin-bottom: 3vw;
+                font-family: FuturaBookC, Arial, Helvetica, sans-serif;
+                color: $text-color;
+            }
+            .completed-project-mobile__image {
+                position: relative;
+            }
+            .main-image {
+                width: 90%;
+            }
+            .left-right {
+                box-sizing: content-box;
+                position: absolute;
+                border-radius: 50%;
+                &:hover {
+                    border: 2px solid white;
+                }
+            }
+            .left-1 {
+                left: 8%;
+                top: 44%;
+            }
+            .right-1 {
+                left: 85%;
+                top: 44%;
+            }
+            .projects-left__property {
+                margin-left: 20px;
+                text-align: left;
+                div:nth-child(2) {
+                    font-family: FuturaBookC, Arial, Helvetica, sans-serif;
+                    color: $text-color;
+                }
+            }
+            .online-control__highlight {
+                margin-top: 60px;
+            }
+        }
+        
+        .second-line__projects-names {
+            margin-top: 5vh;
+            width: 100%;
+            grid-area: project-names;
+        }
+        
+        .projects-names__inner {
+            display: flex;
+            align-items: center;
+            div {
+                margin-right: 5%;
+                @media (max-width: $mobile-screen) {
+                    margin-right: 3%;
+                }
+            }
+            a {
+                @include highlight-font($text-color, 14px);
+                color: #ffffffa6;
+                &:hover {
+                    cursor: pointer;
+                    color: $special-text-color;
+                    text-decoration: underline;
+                }
+            }
+        }
+        
+        .second-line__completed-projects-left {
+            grid-area: completed;
+            margin-left: 14%;
+            >div {
+                margin-bottom: 3vw;
+                font-family: FuturaBookC, Arial, Helvetica, sans-serif;
+                color: $text-color;
+            }
+            .highlight {
+                @include highlight-font($special-text-color, 22px);
+            }
+        }
+        
+        .projects-left__propetrties {
+            display: grid;
+            grid-template-columns: 45% 50%;
+            grid-template-rows: 50% 50%;
+            grid-gap: 2vw;
+            .highlight {
+                @include highlight-font($special-text-color, 19px);
+            }
+        }
+        
+        .second-line__completed-projects-right {
+            grid-area: photo-slider;
+            max-height: 482px;
+            .photo-1 {
+                width: 81%;
+                min-width: 550px;
+                margin-right: 10px;
+            }
+            .photo-2 {
+                position: fixed;
+                flex-wrap: nowrap;
+                max-width: 142px;
+            }
+        }
+        
+        .slider-arrows {
+            margin-top: 5vw;
+            display: flex;
+            width: 200px;
+            justify-content: space-between;
+            svg {
+                display: inline;
+                fill: $special-text-color;
+            }
+        }
+        
+        .slider-arrows>div {
+            display: flex;
+        }
+        
+        .circles {
+            width: 40%;
+            padding-top: 2px;
+            display: flex;
+            height: 14px;
+            justify-content: space-between;
+        }
+        
+        .circle {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.281);
+            &:hover {
+                cursor: pointer;
+                background-color: white;
+            }
+        }
+        
+        .online-control__highlight {
+            display: flex;
+            justify-content: center;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            @include highlight-font($text-color, 1.5em);
+            text-align: center;
+            margin: 0 auto;
+        }
+        
+        .online-control__camera {
+            display: flex;
+            justify-content: space-between;
+            width: 10%;
+            align-items: center;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            margin: 0 auto;
+            .line {
+                height: 0px;
+                width: 30px;
+                border: 1px solid $button-color;
+            }
+        }
+        
+        .container-video {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .video {
+            position: relative;
+            top: 120px;
+            z-index: 1;
+            width: 50%;
+            min-width: 400px;
+        }
+        
+        .container-types-of-repair {
+            margin-top: 15%;
+            font-family: FuturaBookC, Arial, Helvetica, sans-serif;
+            padding: 40px 10%;
+            article {
+                text-align: center;
+            }
+        }
+        
+        .types-of-repair__request-camera {
+            height: 50px;
+        }
+        
+        .types-of-repair__line {
+            width: 30px;
+            height: 0px;
+            margin: auto 20px;
+        }
+        
+        .form-request {
+            width: 70%;
+            min-width: 500px;
+            margin: 40px auto;
+            text-align: center;
+            input {
+                margin-bottom: 20px;
+            }
+            input[placeholder] {
+                font-size: 15px;
+                width: 100%;
+                height: 30px;
+                border: 0;
+                border-bottom: 1px solid black;
+                padding: 5px;
+                margin-right: 20px;
+                &:focus {
+                    border: 3px solid #555;
+                }
+            }
+            .label-check {
+                display: inline-block;
+                width: 100%;
+                margin: 0 auto;
+                text-align: center;
+            }
+            #check-agree {
+                background-color: $button-color;
+            }
+            label {
+                display: inline-block;
+                width: 30%;
+                text-align: left;
+                margin-right: 20px;
+                float: left;
+            }
+        }
+        
+        .submit-1 {
+            @include button(30%, 40px);
+            float: right;
+        }
+        
+        .repair-types__wrapper {
+            width: 100%;
+            display: flex;
+            flex-flow: wrap;
+            justify-content: center;
+        }
+        
+        .types-of-repair__types {
+            margin-top: 40px;
+        }
+        
+        .repair__types__highlights {
+            @include highlight-font(black, 1.5em);
+            text-align: center;
+        }
+        
+        .repair__types__icon img {
+            display: block;
+            margin: 20px auto;
+        }
+        
+        .repair-types__type {
+            position: relative;
+            width: 27%;
+            height: 75vh;
+            min-width: 300px;
+            margin: 20px;
+            margin-top: 40px;
+            margin-bottom: 100px;
+            .type-description__highlights {
+                @include highlight-font(black, 14px);
+                text-transform: capitalize;
+                margin-left: 10%;
+            }
+            .type-description {
+                margin: 0 auto;
+                background-color: rgb(255, 248, 236);
+                width: 90%;
+                position: absolute;
+                top: 50%;
+                left: 5%;
+                li {
+                    font-family: FuturaBookC, Arial, Helvetica, sans-serif;
+                    font-size: 14px;
+                    color: #959595;
+                    margin-left: 10%;
+                    line-height: 1.5em;
+                }
+            }
+        }
+        
+        .repair-types__type-1 {
+            background: url(./assets/images/type1.png) no-repeat;
+            background-size: 100%;
+        }
+        
+        .repair-types__type-2 {
+            background: url(./assets/images/type2.png) no-repeat;
+            background-size: 100%;
+        }
+        
+        .repair-types__type-3 {
+            background: url(./assets/images/type3.png) no-repeat;
+            background-size: 100%;
+        }
+        
+        .type-description__button-cost {
+            @include button(80%, 35px);
+            @include highlight-font($text-color, 14px);
+            margin-top: 10%;
+        }
+        
+        .proposes-in-circle {
+            position: relative;
+            float: left;
+            background: url(./assets/images/circle-back-building.png) no-repeat;
+            font-family: FuturaBookC, Arial, Helvetica, sans-serif;
+            width: 700px;
+            height: 700px;
+            background-size: 100%;
+        }
+        
+        .proposes__circle {
+            position: absolute;
+            right: 300px;
+            top: 100px;
+            width: 500px;
+            height: 500px;
+            min-width: inherit;
+            min-height: inherit;
+            border: 3px solid $button-color;
+            border-radius: 50%;
+        }
+        
+        .proposes-in-circle__propose {
+            position: absolute;
+            display: flex;
+            .propose__text {
+                max-width: 360px;
+                margin: auto auto;
+            }
+        }
+        
+        .propose__num {
+            box-sizing: content-box;
+            background-color: $button-color;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            //margin: 20px;
+            border: 20px solid white;
+            @include highlight-font($text-color, 14px);
+            border-radius: 50%;
+        }
+        
+        .proposes-in-circle .one {
+            left: 280px;
+            top: 132px;
+        }
+        
+        .proposes-in-circle .two {
+            left: 345px;
+            top: 225px;
+        }
+        
+        .proposes-in-circle .three {
+            left: 362px;
+            top: 330px;
+        }
+        
+        .proposes-in-circle .four {
+            left: 338px;
+            top: 423px;
+            .propose__text {
+                width: 225px;
+            }
+        }
+        
+        .form-request-measures {
+            display: block;
+            background-color: black;
+            border: 2px solid rgba(78, 78, 78, 0.692);
+            color: $text-color;
+            width: 30%;
+            height: 400px;
+            float: right;
+            margin: 100px 20px 20px 20px;
+            div {
+                margin: 15px auto;
+                font-family: FuturaDemiC, Arial, Helvetica, sans-serif;
+                text-align: center;
+            }
+            label {
+                font-family: FuturaBookC, Arial, Helvetica, sans-serif;
+                color: rgba(255, 255, 255, 0.568);
+                font-size: 12px;
+                margin-bottom: 5px;
+                display: block;
+                width: 100%;
+                margin: 0 10%;
+            }
+            #name-2,
+            #phone-2,
+            #email-2,
+            .submit-2 {
+                display: block;
+                &::placeholder {
+                    color: $text-color;
+                }
+                background-color: black;
+                border: 0;
+                color: white;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.562);
+                width: 80%;
+                height: 30px;
+                margin-left: 10%;
+                margin-bottom: 15px;
+            }
+            #chekbox-2 {
+                background-color: $button-color;
+                margin-right: 10px;
+            }
+            .label-chechbox-2 {
+                color: $text-color;
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+            .submit-2 {
+                background-color: $button-color;
+                font-family: FuturaDemiC, Arial, Helvetica, sans-serif;
+                width: 60%;
+                height: 40px;
+                float: right;
+                margin-right: 10%;
+                margin-top: 10%;
+                text-transform: uppercase;
+                &:hover {
+                    background-color: $text-color;
+                    color: $button-color;
+                    border: 3px solid $button-color;
+                    cursor: pointer;
+                }
+            }
+        }
+        
+        .container-repair-styles {
+            position: relative;
+            overflow: visible;
+            display: flex;
+            background: linear-gradient( rgba(0, 0, 0, 0.7)), url(./assets/images/realize-back-image.png) no-repeat;
+            background-size: 100%;
+            height: 60vw;
+            width: 100vw;
+        }
+        
+        .container-repair-styles__mobile {
+            display: none;
+        }
+        
+        .repair-styles__list {
+            width: 40%;
+            margin-left: 5%;
+            margin-top: 6%;
+            line-height: 4vw;
+            ul {
+                list-style: none;
+            }
+            text-decoration: none;
+            li {
+                font-family: "Proksima Nova", Arial, Helvetica, sans-serif;
+                font-size: 14px;
+                a {
+                    color: $text-color;
+                    &:hover {
+                        text-decoration: underline;
+                        color: $button-color;
+                    }
+                }
+            }
+        }
+        
+        .list__highlight {
+            @include highlight-font( $special-text-color, 20px);
+            display: inline-block;
+        }
+        
+        .repair-styles__furniture {
+            position: absolute;
+            z-index: 10;
+            top: -5.5%;
+            right: 10px;
+            display: flex;
+            width: 60%;
+            .first {
+                margin-left: 40px;
+            }
+            img {
+                width: 90%;
+                margin-bottom: 20px;
+            }
+        }
+        
+        .design-project {
+            height: 40vw;
+            margin-top: 10%;
+            div {
+                margin-top: 20px;
+            }
+        }
+        
+        .design-project__highlight {
+            @include highlight-font(black, 1.5em);
+            text-align: center;
+        }
+        
+        .design-project__pen-svg {
+            img {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+        
+        .design-project__description {
+            text-align: center;
+            font-family: "Proksima Nova", Arial, Helvetica, sans-serif;
+            font-size: 1em;
+        }
+        
+        .design-types__wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .design-types__type {
+            position: relative;
+            width: 29%;
+            height: 75vh;
+            margin: 20px;
+            margin-top: 40px;
+            .design-description__highlights {
+                @include highlight-font(black, 14px);
+                text-transform: capitalize;
+                margin-left: 10%;
+            }
+            .design-description {
+                margin: 0 auto;
+                background-color: rgb(255, 248, 236);
+                width: 90%;
+                position: absolute;
+                top: 22vw;
+                left: 5%;
+                li {
+                    font-family: FuturaBookC, Arial, Helvetica, sans-serif;
+                    font-size: 14px;
+                    color: #959595;
+                    margin-left: 10%;
+                    line-height: 1.5em;
+                }
+            }
+        }
+        
+        .design-types__type-1 {
+            background: url(./assets/images/project-1.png) no-repeat;
+            background-size: 100%;
+        }
+        
+        .design-types__type-2 {
+            background: url(./assets/images/project-2.png) no-repeat;
+            background-size: 100%;
+        }
+        
+        .design-types__type-3 {
+            background: url(./assets/images/project-3.png) no-repeat;
+            background-size: 100%;
+        }
+        
+        .design-description__button-cost {
+            @include button(80%, 35px);
+            @include highlight-font($text-color, 14px);
+            margin-top: 10%;
+        }
+        
+        .steps-to-goal {
+            display: flex;
+            background: #131313;
+            color: $text-color;
+            padding: 10% 5%;
+            padding-top: 400px;
+        }
+        
+        .steps-to-goal-left {
+            margin-top: 10px;
+            width: 37%;
+            padding-right: 7%;
+            >div {
+                margin-bottom: 20px;
+            }
+        }
+        
+        .steps-to-goal__pre-head {
+            font-family: FuturaDemiC;
+            font-size: 1em;
+            text-transform: uppercase;
+        }
+        
+        .steps-to-goal__head {
+            justify-content: space-between;
+            display: flex;
+            div:nth-child(1) {
+                width: 60%;
+            }
+            @include highlight-font($special-text-color, 1.5em);
+            .head__line {
+                margin-top: 53px;
+                width: 40%;
+                height: 0px;
+                border: 1px solid $special-text-color;
+            }
+        }
+        
+        .steps-to-goal__number {
+            @include highlight-font($text-color, 1em);
+        }
+        
+        .steps-to-goal__number-head {
+            @include highlight-font($special-text-color, 1em);
+        }
+        
+        .steps-to-goal__number-description {
+            font-family: FuturaBookC, Arial, Helvetica, sans-serif;
+            font-weight: 100;
+            line-height: 3vw;
+        }
+        
+        .steps-to-goal__slider-buttons {
+            .circles {
+                width: 50%;
+            }
+            .slider-arrows {
+                width: 90%;
+                min-width: 230px;
+            }
+        }
+        
+        .steps-to-goal__right {
+            width: 63%;
+            img {
+                width: 100%;
+            }
+        }
+        
+        .steps-to-goal__steps-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1.5fr 0.7fr;
+            grid-template-rows: 1fr 1fr;
+            row-gap: 10%;
+            margin-bottom: 5%;
+            height: 35%;
+            .first {
+                opacity: 1;
+            }
+        }
+        
+        .steps-grid__grid-number {
+            .num {
+                @include highlight-font($text-color, 1em);
+            }
+            .line {
+                width: 40px;
+                height: 0px;
+                border: 1px solid $button-color;
+            }
+            .description {
+                font-family: FuturaBookC;
+                font-size: 14px;
+                margin-top: 10%;
+            }
+            opacity: 0.5;
+        }
+        
+        .our-team {
+            background: black;
+            text-align: center;
+            height: 90%;
+            >* {
+                margin: 0 auto;
+                margin-bottom: 20px;
+            }
+            .our-team__highlight {
+                @include highlight-font($text-color, 1.5em)
+            }
+            img {
+                display: inline;
+            }
+            .our-team__description {
+                font-family: FuturaBookC;
+                color: $text-color;
+            }
+        }
+        
+        .our-team__persones {
+            display: flex;
+            position: relative;
+            bottom: -10vw;
+            justify-content: space-between;
+            margin-top: 0px;
+            padding: 0 10%;
+            .first {
+                background: url(./assets/images/person-1.png) no-repeat;
+                background-size: 100%;
+            }
+            .second {
+                background: url(./assets/images/person-2.png) no-repeat;
+                background-size: 100%;
+            }
+            .third {
+                background: url(./assets/images/person-3.png) no-repeat;
+                background-size: 100%;
+            }
+        }
+        
+        .our-team__person {
+            position: relative;
+            width: 30%;
+            height: 31vw;
+            img {
+                position: relative;
+                width: 40%;
+                left: -50%;
+                bottom: 4vw;
+            }
+            .name {
+                display: flex;
+                position: absolute;
+                justify-content: center;
+                align-items: center;
+                bottom: -10px;
+                width: 90%;
+                margin: auto 5%;
+                height: 30%;
+                text-align: center;
+                background-color: white;
+                span:nth-child(1) {
+                    @include highlight-font(black, 15px);
+                    text-transform: capitalize;
+                }
+                span:nth-child(3) {
+                    font-family: FuturaBookC;
+                    color: rgba(0, 0, 0, 0.5);
+                }
+            }
+            .experience {
+                position: absolute;
+                z-index: 10;
+                bottom: -20%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90%;
+                height: 35px;
+                margin: 0 5%;
+                background-color: $button-color;
+                @include highlight-font($text-color, 0.8em);
+            }
+        }
+        
+        .team__description {
+            padding-top: 20%;
+            >* {
+                margin-bottom: 20px;
+            }
+            .description__line {
+                margin: 20px auto;
+                width: 40px;
+                height: 0px;
+                border: 1px solid $button-color;
+            }
+            text-align: center;
+            .description__text {
+                width: 60%;
+                margin: 0 auto;
+                font-size: 19px;
+                font-family: FuturaBookC;
+            }
+        }
+        
+        .our-clients {
+            margin-top: 80px;
+        }
+        
+        .our-clients__description {
+            >* {
+                margin-bottom: 20px;
+            }
+            text-align: center;
+        }
+        
+        .our-clients__highlight {
+            @include highlight-font(black, 1.5em);
+        }
+        
+        .our-clients__description-text {
+            font-family: FuturaBookC;
+            font-size: 19px;
+        }
+        
+        .our-clients__clients {
+            margin: 0 auto;
+            display: flex;
+            width: 90%;
+            justify-content: space-between;
+            .client {
+                width: 27%;
+            }
+        }
+        
+        .client__profile {
+            display: flex;
+            align-items: center;
+            .name {
+                margin-left: 15px;
+                font-family: "Yeseva One";
+                text-transform: capitalize;
+            }
+        }
+        
+        .client__review {
+            margin-top: 15px;
+            font-family: FuturaBookC;
+            color: #555;
+            line-height: 1.5em;
+        }
+        
+        .client__cost-time {
+            display: flex;
+            margin-top: 40px;
+            >div {
+                width: 50%;
+                display: grid;
+                grid-template-areas: "image text-1";
+                grid-template-columns: 1fr 1.5fr;
+                >* {
+                    align-self: center;
+                    justify-self: center;
+                }
+            }
+            height: 50px;
+            background-color: $button-color;
+            @include highlight-font($text-color, 16px);
+            .cost-time__square {
+                border-right: 1px solid $text-color;
+            }
+            img {
+                display: block;
+            }
+            .image-1 {
+                grid-area: image;
+            }
+            .image-2 {
+                grid-area: image;
+            }
+            .square {
+                grid-area: text-1;
+            }
+            .time {
+                grid-area: text-1;
+            }
+        }
+        
+        .form-questions {
+            position: relative;
+            bottom: -140px;
+            background-color: black;
+            padding: 3% 10%;
+            width: 60%;
+            margin: 0 auto;
+            .form-questions__highlight {
+                @include highlight-font($text-color, 14px);
+                text-align: center;
+            }
+            form {
+                margin-top: 20px;
+                >div {
+                    margin-bottom: 20px;
+                }
+                label {
+                    color: rgba(255, 255, 255, 0.514);
+                    font-family: FuturaBookC;
+                    font-size: 13px;
+                }
+                input {
+                    font-family: FuturaBookC;
+                    height: 25px;
+                    background-color: black;
+                    border: 0;
+                    color: $text-color;
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.295);
+                    &::placeholder {
+                        font-family: FuturaBookC;
+                        color: $text-color;
+                        font-size: 16px;
+                    }
+                }
+                .name-and-phone {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: 0.6fr 1fr;
+                    column-gap: 20px;
+                }
+                .question-3 {
+                    input {
+                        width: 100%;
+                    }
+                }
+                >.agree-3 {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    label {
+                        color: $text-color;
+                        font-size: 16px;
+                    }
+                    input {
+                        margin-right: 5px;
+                    }
+                }
+                >.submit-3 {
+                    display: block;
+                    margin: 20px auto;
+                    @include button(30%, 30px);
+                }
+            }
+        }
+        
+        .contacts {
+            display: grid;
+            background: linear-gradient(rgba(0, 0, 0, 0.863)), url(./assets/images/contacts-background.png);
+            padding-top: 160px;
+        }
+        
+        .contacts__address {
+            @include highlight-font($special-text-color, 16px);
+            text-align: center;
+            margin: 30px auto;
+        }
+        
+        .contacts__icons {
+            text-align: center;
+            img {
+                width: 50px;
+                margin: 0 15px;
+                border-radius: 50%;
+                &:hover {
+                    border: 2px solid white;
+                }
+            }
+            margin: 30px auto;
+        }
+        
+        .contacts__map {
+            img {
+                width: 60%;
+            }
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        @import "media-queries";
