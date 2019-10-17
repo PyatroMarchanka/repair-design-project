@@ -89,6 +89,9 @@
         
         .header-inner__main-logo {
             color: $special-text-color;
+            h1 {
+                font-size: medium;
+            }
         }
         
         .navbar {
@@ -230,9 +233,6 @@
         
         .highlight {
             @include highlight-font($special-text-color, 22px);
-            h1 {
-                font-weight: 400;
-            }
             span {
                 color: $text-color;
             }

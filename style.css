@@ -67,6 +67,10 @@ a {
   color: #E3B873;
 }
 
+.header-inner__main-logo h1 {
+  font-size: medium;
+}
+
 .navbar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -236,10 +240,6 @@ a {
   font-size: 22px;
   text-transform: uppercase;
   line-height: 1.5em;
-}
-
-.highlight h1 {
-  font-weight: 400;
 }
 
 .highlight span {
