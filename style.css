@@ -99,6 +99,7 @@ a {
 }
 
 .phone a {
+  font-size: 14px;
   color: #E3B873;
   text-decoration: underline;
 }
