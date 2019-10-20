@@ -3,6 +3,7 @@ $large-table-screen: 991px;
 $medium-table-screen: 767px;
 @media (max-width: $large-table-screen) {
     .form-request-measures {
+        position: static;
         width: 60%;
         height: 400px;
         float: left;
@@ -283,6 +284,11 @@ $medium-table-screen: 767px;
     }
     .button-submit-mobile {
         display: flex;
+    }
+    .phone {
+        a {
+            font-size: 14px;
+        }
     }
     .first-line__scroll-down {
         display: none;

@@ -1,5 +1,6 @@
 @media (max-width: 991px) {
   .form-request-measures {
+    position: static;
     width: 60%;
     height: 400px;
     float: left;
@@ -302,6 +303,9 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .phone a {
+    font-size: 14px;
   }
   .first-line__scroll-down {
     display: none;

@@ -102,7 +102,8 @@
         
         @media (max-width: 1000px) {
             .button-request,
-            .n3 {
+            .n3,
+            .n4 {
                 display: none;
             }
         }
@@ -174,12 +175,20 @@
             text-transform: uppercase;
             color: $special-text-color;
             text-align: center;
+            padding-right: 10px;
             writing-mode: tb-rl;
             a {
                 color: $special-text-color;
                 &:hover {
                     color: white;
                 }
+            }
+            .line {
+                display: inline-block;
+                border: 1px solid $button-color;
+                width: 0px;
+                height: 40px;
+                margin-top: 40px;
             }
         }
         
@@ -387,6 +396,7 @@
         }
         
         .second-line__completed-projects-right {
+            position: relative;
             grid-area: photo-slider;
             max-height: 482px;
             .photo-1 {
@@ -398,6 +408,16 @@
                 position: fixed;
                 flex-wrap: nowrap;
                 max-width: 142px;
+            }
+        }
+        
+        .left-desktop {
+            position: absolute;
+            left: 5%;
+            top: 40%;
+            border-radius: 50%;
+            &:hover {
+                border: 2px solid white;
             }
         }
         
@@ -677,6 +697,8 @@
         }
         
         .form-request-measures {
+            position: absolute;
+            right: 1%;
             display: block;
             background-color: black;
             border: 2px solid rgba(78, 78, 78, 0.692);

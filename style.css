@@ -83,7 +83,8 @@ a {
 
 @media (max-width: 1000px) {
   .button-request,
-  .n3 {
+  .n3,
+  .n4 {
     display: none;
   }
 }
@@ -160,6 +161,7 @@ a {
   text-transform: uppercase;
   color: #E3B873;
   text-align: center;
+  padding-right: 10px;
   -webkit-writing-mode: tb-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: tb-rl;
@@ -171,6 +173,14 @@ a {
 
 .first-line__instagram a:hover {
   color: white;
+}
+
+.first-line__instagram .line {
+  display: inline-block;
+  border: 1px solid #E3B873;
+  width: 0px;
+  height: 40px;
+  margin-top: 40px;
 }
 
 .first-line__main-photo-name {
@@ -453,6 +463,7 @@ a {
 }
 
 .second-line__completed-projects-right {
+  position: relative;
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: photo-slider;
@@ -470,6 +481,17 @@ a {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   max-width: 142px;
+}
+
+.left-desktop {
+  position: absolute;
+  left: 5%;
+  top: 40%;
+  border-radius: 50%;
+}
+
+.left-desktop:hover {
+  border: 2px solid white;
 }
 
 .slider-arrows {
@@ -854,6 +876,8 @@ a {
 }
 
 .form-request-measures {
+  position: absolute;
+  right: 1%;
   display: block;
   background-color: black;
   border: 2px solid rgba(78, 78, 78, 0.692);
@@ -1708,6 +1732,7 @@ a {
 
 @media (max-width: 991px) {
   .form-request-measures {
+    position: static;
     width: 60%;
     height: 400px;
     float: left;
@@ -2010,6 +2035,9 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .phone a {
+    font-size: 14px;
   }
   .first-line__scroll-down {
     display: none;
